@@ -9,8 +9,15 @@
 
 <p> {!! $ticket->content !!} </p>
 </div>
-<a href="#" class="btn btn-info">Edit</a>
-<a href="#" class="btn btn-info">Delete</a>
+
+<a	href="{!!	action('TicketsController@edit',	$ticket->id)	!!}"	class="btn	btn-infopull-left">Edit</a>
+<form	method="post"	action="{!!	action('TicketsController@destroy',	$ticket->id)!!}"	class="pull-left">
+	<input type="hidden" name="_method" value="PUT">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+<button	type="submit"	class="btn	btn-warning">Delete</button>
+</form>
+<div	class="clearfix"></div>
+
 </div>
 </div>
 @endsection

@@ -96,11 +96,9 @@ class TicketsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        $ticket = \App\Ticket::find($id);
-        $ticket->delete();
-  
-        return redirect()->route('tickets.index')
-                        ->with('success','ticket deleted successfully');
+    {  
+    // $ticket =  \App\Ticket::find($id);                
+        $ticket->delete();             
+        return  redirect()->route('tickets.index')->with('status',    'The    ticket  '.$id.'   has been    deleted !'); 
     }
 }
