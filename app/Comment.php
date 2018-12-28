@@ -11,8 +11,5 @@ public function ticket()
     return $this->belongsTo('App\Ticket');
 }
 protected $guarded = ['id'];
-public function comments()
-{
-return $this->hasMany('App\Comment', 'post_id');
-}
+
 }

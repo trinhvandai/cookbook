@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+// namespace App\Http\Controllers\Admin;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -14,7 +15,7 @@ class RegisterController extends Controller
     |--------------------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------
-    |
+    |composer dump-autoload -o
     | This controller handles the registration of new users as well as their
     | validation and creation. By default this controller uses a trait to
     | provide this functionality without requiring any additional code.
