@@ -16,3 +16,8 @@ Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'TicketsController@create');
 Route::post('/contact', 'TicketsController@store');
 Route::resource('tickets','TicketsController');
+Route::post('/comment', 'CommentsController@newComment')->name('comment');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
