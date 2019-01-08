@@ -18,7 +18,8 @@
 <tbody>
 @foreach($categories as $category)
 <tr>
-<td>{!! $category->name !!}</td>
+<td>
+<a href="{!! action('Admin\CategoriesController@edit', $category->id) !!}">{!! $category->name !!}</td>
 </tr>
 @endforeach
 </tbody>

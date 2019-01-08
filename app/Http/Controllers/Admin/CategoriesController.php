@@ -65,7 +65,8 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::whereId($id)->firstOrFail();
+        return view('backend.categories.edit', compact( 'category'));
     }
 
     /**
@@ -77,7 +78,11 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = Category::whereId($id)->firstOrFail();
+        $category->name = $request->get('name');
+        $category->save();
+        return redirect(action('Admin\CategoriesController@edit', $category->id))->with('status', '
+        The post has been updated!');
     }
 
     /**
@@ -88,6 +93,8 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::whereId($id)->firstOrFail();
+        $category->delete();
+        return rederict(action('Admin\CategoriesController@index',$category->id));
     }
 }

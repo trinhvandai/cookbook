@@ -20,6 +20,7 @@
 <li><a href="/about">About</a></li>
 <li><a href="/blog">Blog</a></li>
 <li><a href="/contact">Contact</a></li>
+<li><a href="/admin">Admin</a></li>
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="b
 
