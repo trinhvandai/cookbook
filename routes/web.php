@@ -31,7 +31,7 @@ Route::group(array(
         Route::get('users/{id?}/edit', 'UsersController@edit')->name('users_edit');
         Route::post('users/{id?}/edit','UsersController@update');
         Route::get('/', 'PagesController@home');
-        Route::get('posts', 'PostsController@index');
+        Route::get('posts', 'PostsController@index')->name('posts');
         Route::get('posts/create', 'PostsController@create');
         Route::post('posts/create', 'PostsController@store');
         Route::get('posts/{id?}/edit', 'PostsController@edit');
@@ -40,5 +40,6 @@ Route::group(array(
         Route::get('categories/create', 'CategoriesController@create');
         Route::post('categories/create', 'CategoriesController@store');
     });
-
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/{id?}', 'BlogController@show');
 Route::get('/home', 'HomeController@index')->name('home');

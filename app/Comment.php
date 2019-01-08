@@ -11,5 +11,8 @@ public function ticket()
     return $this->belongsTo('App\Ticket');
 }
 protected $guarded = ['id'];
-
+public function post()
+{
+    return $this->morphTo(); 
+}
 }

@@ -23,21 +23,21 @@
 </div>
 <div class="form-group">
 <label for="content" class="col-lg-2 control-label">Content</label>
+<div class="col-lg-10">
+<textarea class="form-control" rows="3" id="content" placeholder="content" name="content"></textarea>
+</div>
+</div>
 <div class="form-group">
-<label for="categories" class="col-lg-2 control-label">Categories</label>
-<div class="col-lg-10">
-<select class="form-control" id="category" name="categories[]" multiple>
-@foreach($categories as $category)
-<option value="{!! $category->id !!}">
-{!! $category->name !!}
-</option>
-@endforeach
-</select>
-</div>
-</div>
-<div class="col-lg-10">
-<textarea class="form-control" rows="3" id="content" name="content"></textarea>
-</div>
+    <label for="categories" class="col-lg-2 control-label">Categories</label>
+    <div class="col-lg-10">
+    <select class="form-control" id="category" name="categories[]" multiple>
+    @foreach($categories as $category)
+    <option value="{!! $category->id !!}">
+    {!! $category->name !!}
+    </option>
+    @endforeach
+    </select>
+    </div>
 </div>
 <div class="form-group">
 <div class="col-lg-10 col-lg-offset-2">

@@ -1,9 +1,5 @@
 @extends('master')
 @section('name', 'Edit a user')
-Chapter 4 - Building A Blog Application
-
-200
-
 @section('content')
 <div class="container col-md-6 col-md-offset-3">
 <div class="well well bs-component">
