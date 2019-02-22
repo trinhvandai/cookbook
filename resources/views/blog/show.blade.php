@@ -29,6 +29,7 @@
 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 <input type="hidden" name="post_id" value="{!! $post->id !!}">
 <input type="hidden" name="post_type" value="App\Post">
+@if(Auth::check())
 <fieldset>
 <legend>Comment</legend>
 <div class="form-group">
@@ -45,6 +46,7 @@
         </div>
     </div>
 </fieldset>
+@endif
 </form>
 </div>
 </div>
